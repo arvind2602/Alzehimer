@@ -1,0 +1,302 @@
+{%extends 'nav.html'%}
+{% load static%}
+{% block title%}Detect Alzeimer{% endblock title%}
+{% block css%}
+<style>
+
+    .container1 {
+        box-sizing: border-box;
+        margin: 40px;
+        margin-top: 8rem;
+        text-align: center;
+        font-family: sans-serif;
+        max-width: 1200px;
+        border: 1px solid #eee;
+        display: flex;
+      }
+      
+      .left {
+        border-right: 1px solid #eee;
+      }
+      
+      .right {
+        padding: 20px;
+        margin: 0 auto;
+      }
+      
+      hr {
+        width: 80%;
+        border: 0;
+        height: 1px;
+        background: #eee;
+      }
+      
+      #imagelinkform {
+        margin: 30px;
+      }
+      
+      #imagelinkform label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      #imagelinkform input {
+        width: 60%;
+      }
+      
+      #fileinput {
+        display: none;
+      }
+      
+      #dropzone {
+          width: 80%;
+          height: 200px;
+          border: 2px solid #333;
+          border-radius: 2rem;
+          margin: 30px auto;
+          text-align: center;
+          vertical-align: middle;
+      }
+      
+      #dropzone:hover {
+        cursor: pointer;
+      }
+      
+      #dropzone p {
+        position: relative;
+        font-size: 1.5rem;
+        max-width: 70%;
+        margin: 0 auto;
+        top: 32%;
+      }
+      
+      #dropzone.dragging {
+        background: #444;
+      }
+      
+      #gallery {
+        margin: 0 auto;
+      }
+      
+      #cleargallery {
+        display: block;
+        margin: 0 auto;
+      }
+      
+      #gallery img {
+          display: block;
+          margin: 20px auto;
+          max-width: 400px;
+          max-height: 400px;
+      }
+
+
+.button-56 {
+  align-items: center;
+  background-color: #3fbbc0;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #fffafa;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 9rem;
+  margin-top: 1rem;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #a73023;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+</style>
+
+{% endblock css%}
+{% block content%}
+<div class="container1">
+    <div class="left">
+      <h1>Upload Your MRI Image here</h1>
+      <form id="imagelinkform">
+          <label for="imageurl">
+              Paste an MRI image url or drag and drop below!
+          </label>
+          <input type="url" 
+                 id="imageurl" 
+                 placeholder="http://mysite.com/image.jpg">
+          <button type="submit" class="button-56">Submit</button>
+      </form>
+      <hr>
+  
+      <input type="file" id="fileinput" accept="image/*" />
+      <label for="fileinput">
+        <div id="dropzone">
+          <p>Drop MRI Image Here or Click to select a file!</p>
+        </div>
+      </label>
+    </div>
+    <div class="right"> 
+      <button id="cleargallery" class="button-56">Clear Images</button>
+      <br>
+      <div id="gallery"></div>
+      <br>
+      <a href="#demo"><button id="cleargallery" class="button-56" onclick="results()">Submit Image</button></a>
+      
+    </div>
+  </div>
+  <div id="demo" style="display:none; text-align:center;padding-bottom:4rem" >
+<h1 style="color:#a73023">Alzeimer Detected </h1>
+<p>Model confidence : 91.08%</p>
+<p>Note : The given MRI image of brain have atrophied (shrunk)</p>
+  
+  
+
+{% endblock content%}
+{% block photo%} <img src="{% static 'assets/img/result.png'%}" alt=""> {% endblock photo%}
+</div>
+ <!-- ======= Footer ======= -->
+              
+
+
+
+ <div class="container " style="text-align: center;">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Team XD</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="https://github.com/arvind2602">Arvind Gupta</a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<!-- End Footer -->
+{% block js%}
+
+<script>
+    const dropzone = document.getElementById("dropzone");
+    const gallery = document.getElementById("gallery");
+    const imagelinkform = document.getElementById("imagelinkform");
+    const cleargallery = document.getElementById("cleargallery");
+    const fileinput = document.getElementById("fileinput");
+    
+    function stopPropagationAndPreventDefault(e) {
+        e.stopPropagation();
+        e.preventDefault();
+    }
+    
+    function handleFileAndAppend(file) {
+        if (!file.type.startsWith("image/")) {
+            console.log("not an image");
+            return;
+        }
+        
+        const imgElement = document.createElement("img");
+        imgElement.file = file;
+        if (gallery.firstChild) {
+          gallery.prepend(imgElement, gallery.firstChild); 
+        } else {
+          gallery.appendChild(imgElement);
+        }
+      
+        dropzone.classList.remove("dragging");
+        
+        const fileReader = new FileReader();
+        fileReader.onload = ((img) => (e) => {img.src = e.target.result;})(imgElement);
+        fileReader.readAsDataURL(file);   
+    }
+    
+    function imageLinkHandler(e) {
+        stopPropagationAndPreventDefault(e);
+            
+        const imgElement = document.createElement("img");
+        imgElement.src = e.target.imageurl.value;
+        gallery.appendChild(imgElement);
+    }
+    
+    function clearGalleryHandler(e) {
+      stopPropagationAndPreventDefault(e);
+      while (gallery.firstChild) {
+        gallery.removeChild(gallery.firstChild);
+      }
+    }
+    
+    function dropHandler(e) {
+        stopPropagationAndPreventDefault(e);
+        const file = e.dataTransfer.files[0];
+        handleFileAndAppend(file);
+    }
+    
+    function fileInputHandler(e) {
+      const file = this.files[0];
+      handleFileAndAppend(file);
+    }
+    
+    function dragoverHandler(e) {
+      stopPropagationAndPreventDefault(e);
+      dropzone.classList.add("dragging");
+    }
+    
+    function dragleaveHandler(e) {
+      stopPropagationAndPreventDefault(e);
+      dropzone.classList.remove("dragging");
+    }
+    
+    imagelinkform.addEventListener("submit", imageLinkHandler, false);
+    cleargallery.addEventListener("click", clearGalleryHandler, false);
+    fileinput.addEventListener("change", fileInputHandler, false);
+    dropzone.addEventListener("dragenter", stopPropagationAndPreventDefault, false);
+    dropzone.addEventListener("dragover", dragoverHandler, false);
+    dropzone.addEventListener("dragleave", dragleaveHandler, false);
+    dropzone.addEventListener("drop", dropHandler, false)
+      
+    function results(){
+        document.getElementById("demo").style.display="block";
+    }
+
+
+</script>
+{% endblock js%}
