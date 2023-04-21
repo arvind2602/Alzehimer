@@ -16,8 +16,10 @@
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Rubik:wght@300;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Rubik:wght@300;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
@@ -32,16 +34,13 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
   <style>
-    .animate-logo
-    {
+    .animate-logo {
       text-transform: uppercase;
-      background-image: linear-gradient(
-        -225deg,
-        #231557 0%,
-        #44107a 29%,
-        #ff1361 67%,
-        #fff800 100%
-      );
+      background-image: linear-gradient(-225deg,
+          #231557 0%,
+          #44107a 29%,
+          #ff1361 67%,
+          #fff800 100%);
       background-size: auto auto;
       background-clip: border-box;
       background-size: 200% auto;
@@ -52,9 +51,9 @@
       -webkit-text-fill-color: transparent;
       animation: textclip 2s linear infinite;
       display: inline-block;
-      
+
     }
-    
+
     @keyframes textclip {
       to {
         background-position: 200% center;
@@ -75,34 +74,34 @@
       transition: transform .2s ease-out;
       z-index: -1;
     }
-    
+
     .button-56:hover:after {
       transform: translate(0, 0);
     }
-    
+
     .button-56:active {
       background-color: #a73023;
       outline: 0;
     }
-    
+
     .button-56:hover {
       outline: 0;
     }
-    
+
     @media (min-width: 768px) {
       .button-56 {
         padding: 0 40px;
       }
     }
-
   </style>
   <script type="text/javascript">
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+      new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element');
     }
-    </script>
-    
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </script>
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
@@ -114,7 +113,8 @@
         <i class="bi bi-clock"></i> Anytime , Anywhere Easy to use
       </div>
       <div class="d-flex align-items-center">
-        <i class="bi bi-phone"></i> <div id="google_translate_element"></div>
+        <i class="bi bi-phone"></i>
+        <div id="google_translate_element"></div>
       </div>
     </div>
   </div>
@@ -123,7 +123,8 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <a href="index.html" class="logo me-auto"><img src="{% static 'assets/img/logo.png' %}" alt=""><span class="animate-logo">AlZEMIER</span></a>
+      <a href="index.html" class="logo me-auto"><img src="{% static 'assets/img/logo.png' %}" alt=""><span
+          class="animate-logo">AlZEMIER</span></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -135,10 +136,11 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="/detect/alzeimer/" class="appointment-btn scrollto"><span class="d-none d-md-inline">Detect</span> Alzeimer </a>
+      <a href="/detect/alzeimer/" class="appointment-btn scrollto"><span class="d-none d-md-inline">Detect</span>
+        Alzeimer </a>
 
     </div>
-   
+
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
@@ -153,9 +155,10 @@
         <div class="carousel-item active " style="background-image: url({% static 'assets/img/slide/slide-1.jpg)'%}">
           <div class="container">
             <h2>Welcome to <span>Xd </span></h2>
-            <p>An integrated software/App to enhance the quality of health care and increase the interoperability of the Alzheimer identifying process using MRI images.
-              
-             </p>
+            <p>An integrated software/App to enhance the quality of health care and increase the interoperability of the
+              Alzheimer identifying process using MRI images.
+
+            </p>
             <a href="" class="btn-get-started scrollto">Read More</a>
           </div>
         </div>
@@ -164,7 +167,8 @@
         <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-2.jpg)' %}">
           <div class="container">
             <h2>Alzeimer Detection</h2>
-            <p>An integrated software/App to enhance the quality of health care and increase the interoperability of the Alzheimer identifying process using MRI images.
+            <p>An integrated software/App to enhance the quality of health care and increase the interoperability of the
+              Alzheimer identifying process using MRI images.
               .</p>
             <a href="#about" class="btn-get-started scrollto">Read More</a>
           </div>
@@ -174,7 +178,8 @@
         <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-3.jpg' %})">
           <div class="container">
             <h2>Quality of Health Care System</h2>
-            <p>An integrated software/App to enhance the quality of health care and increase the interoperability of the Alzheimer identifying process using MRI images.
+            <p>An integrated software/App to enhance the quality of health care and increase the interoperability of the
+              Alzheimer identifying process using MRI images.
               .</p>
             <a href="#about" class="btn-get-started scrollto">Read More</a>
           </div>
@@ -214,28 +219,35 @@
 
         <div class="section-title">
           <h2>About </h2>
-          <p>Welcome to our Alzheimer's Detection App! We are a team of healthcare professionals, software engineers, and researchers who are passionate about improving the lives of people affected by Alzheimer's disease. </p>
+          <p>Welcome to our Alzheimer's Detection App! We are a team of healthcare professionals, software engineers,
+            and researchers who are passionate about improving the lives of people affected by Alzheimer's disease. </p>
         </div>
 
         <div class="row">
-          <div class="col-lg-6" data-aos="fade-right" >
+          <div class="col-lg-6" data-aos="fade-right">
             <video width="600" height="auto" autoplay loop muted style="border-radius: 4rem;">
               <source src="{%static 'assets/img/vid.mp4'%}" type="video/mp4">
               <!-- <source src="movie.ogg" type="video/ogg"> -->
-            Your browser does not support the video tag.
+              Your browser does not support the video tag.
             </video>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Our app is designed to provide an accurate and accessible means of detecting the early signs of Alzheimer's disease. </h3>
+            <h3>Our app is designed to provide an accurate and accessible means of detecting the early signs of
+              Alzheimer's disease. </h3><br>
             <p class="fst-italic">
-              We understand the importance of early detection and intervention in managing this condition, and our app aims to facilitate that process for users. 
+              We understand the importance of early detection and intervention in managing this condition, and our app
+              aims to facilitate that process for users.
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i>Our team comprises of experts from various fields, including neurology, psychology, and artificial intelligence. </li>
-              <li><i class="bi bi-check-circle"></i> We have leveraged our diverse backgrounds and expertise to create an app that is comprehensive, user-friendly, and reliable</li>
-              <li><i class="bi bi-check-circle"></i>Our app uses cutting-edge technology, including machine learning algorithms, to analyze user input and provide an accurate assessment of their risk of developing Alzheimer's disease. </li>
+              <li><i class="bi bi-check-circle"></i>Our team comprises of experts from various fields, including
+                neurology, psychology, and artificial intelligence. </li>
+              <li><i class="bi bi-check-circle"></i> We have leveraged our diverse backgrounds and expertise to create
+                an app that is comprehensive, user-friendly, and reliable</li>
+              <li><i class="bi bi-check-circle"></i>Our app uses cutting-edge technology, including machine learning
+                algorithms, to analyze user input and provide an accurate assessment of their risk of developing
+                Alzheimer's disease. </li>
             </ul>
-            
+
           </div>
         </div>
 
@@ -251,7 +263,8 @@
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
               <i class="fas fa-user-md"></i>
-              <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1"
+                class="purecounter"></span>
 
               <p><strong>Doctors</strong> consequuntur quae qui deca rode</p>
               <a href="#">Find out more &raquo;</a>
@@ -261,7 +274,8 @@
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
               <i class="far fa-hospital"></i>
-              <span data-purecounter-start="0" data-purecounter-end="26" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="26" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p><strong>Departments</strong> adipisci atque cum quia aut numquam delectus</p>
               <a href="#">Find out more &raquo;</a>
             </div>
@@ -270,7 +284,8 @@
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
               <i class="fas fa-flask"></i>
-              <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p><strong>Research Lab</strong> aut commodi quaerat. Aliquam ratione</p>
               <a href="#">Find out more &raquo;</a>
             </div>
@@ -279,7 +294,8 @@
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
               <i class="fas fa-award"></i>
-              <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p><strong>Awards</strong> rerum asperiores dolor molestiae doloribu</p>
               <a href="#">Find out more &raquo;</a>
             </div>
@@ -305,7 +321,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
-                <img src="{% static 'assets/img/doctors/doctors-1.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'assets/img/doctors/developer-1.jpeg' %}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -314,8 +330,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Medical Officer</span>
+                <h4>Arvind Gupta</h4>
+                <span>Full Stack Developer</span>
               </div>
             </div>
           </div>
@@ -323,7 +339,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="200">
               <div class="member-img">
-                <img src="{% static 'assets/img/doctors/doctors-2.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'assets/img/doctors/developer-2.jpeg' %}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -332,8 +348,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Anesthesiologist</span>
+                <h4>Yash Gosavi </h4>
+                <span>AIML Expert</span>
               </div>
             </div>
           </div>
@@ -341,7 +357,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="300">
               <div class="member-img">
-                <img src="{% static 'assets/img/doctors/doctors-3.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'assets/img/doctors/developer-4.jpeg' %}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -350,8 +366,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>Cardiology</span>
+                <h4>Keenjal Gupta</h4>
+                <span>Front-End Developer</span>
               </div>
             </div>
           </div>
@@ -359,7 +375,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="400">
               <div class="member-img">
-                <img src="{% static 'assets/img/doctors/doctors-4.jpg' %}" class="img-fluid" alt="">
+                <img src="{% static 'assets/img/doctors/developer-3.jpeg' %}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -368,8 +384,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Neurosurgeon</span>
+                <h4>Mohit Gupta</h4>
+                <span>Front-end Developer</span>
               </div>
             </div>
           </div>
@@ -385,77 +401,74 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Frequently Asked Questioins</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
+          <h2>Frequently Asked Questioins</h2><br>
+          <p>Alzheimer's disease is a progressive neurological disorder that affects the brain's function and causes memory loss, cognitive impairment, and behavioral changes. It is the most common cause of dementia, accounting for 60-80% of dementia cases. The disease affects nerve cells and connections in the brain, leading to the death of brain cells and the shrinkage of brain tissue. Some of the most common symptoms of Alzheimer's disease include forgetfulness, difficulty in completing daily tasks, language problems, mood swings, and disorientation</p>
+       <br> </div>
 
         <ul class="faq-list">
 
           <li>
-            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">What is Alzheimer's Disease? <i
+                class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq1" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                Alzheimer's disease is a progressive neurological disorder that affects the brain's function and causes
+                memory loss, cognitive impairment, and behavioral changes. It is the most common cause of dementia,
+                accounting for 60-80% of dementia cases. The disease affects nerve cells and connections in the brain,
+                leading to the death of brain cells and the shrinkage of brain tissue. Some of the most common symptoms
+                of Alzheimer's disease include forgetfulness, difficulty in completing daily tasks, language problems,
+                mood swings, and disorientation.<br><br>
+                <br>
+              <ul>
+                <li>Alzheimer's disease is a progressive neurological disorder</li>
+                <li>The disease affects nerve cells and connections in the brain</li>
+                <li>Some of the most common symptoms of Alzheimer's disease include forgetfulness, difficulty in
+                  completing daily tasks, language problems, mood swings, and disorientation</li>
+              </ul>
               </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">How is Alzheimer's Disease Diagnosed? <i class="bi bi-chevron-down icon-show"></i><i
+                class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq2" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                Alzheimer's disease can be diagnosed through a combination of medical history, physical examination, and various tests. One of the most common ways to diagnose Alzheimer's disease is through a cognitive test, which evaluates a person's memory, language, and other cognitive abilities. Another common diagnostic tool is a brain scan, which includes an MRI, CT scan, or PET scan, to examine the brain for signs of Alzheimer's disease. A spinal tap, which tests the fluid in the spinal cord, can also provide useful information about Alzheimer's disease. Finally, genetic testing may also be used to diagnose Alzheimer's disease, particularly in cases where the disease runs in families. 
               </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">What is MRI? <i class="bi bi-chevron-down icon-show"></i><i
+                class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq3" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-              </p>
+                MRI stands for magnetic resonance imaging. It is a non-invasive diagnostic imaging technique that uses strong magnetic fields and radio waves to produce detailed images of the body's internal structures. MRI is a very powerful imaging tool that can provide detailed images of the brain, spinal cord, bones, and other soft tissues. MRI is used for various medical conditions such as cancer, multiple sclerosis, and neurological disorders, including Alzheimer's disease. The MRI machine is a large, tube-like structure that patients lie in while the machine takes images of their body. The MRI machine is operated by a trained technician, and the procedure is painless and usually takes between 30-60 minutes. </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">How Does MRI Help Detect Alzheimer's Disease?<i class="bi bi-chevron-down icon-show"></i><i
+                class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq4" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
+                MRI is a useful tool in the detection of Alzheimer's disease because it can provide detailed images of the brain's structure and function. In Alzheimer's disease, there is a loss of brain tissue, particularly in the hippocampus, which is responsible for memory formation. MRI can detect changes in the hippocampus and other brain regions, such as the cerebral cortex, that are affected by Alzheimer's disease. MRI can also detect the presence of amyloid plaques and neurofibrillary tangles, which are the hallmark signs of Alzheimer's disease. These changes in the brain can be detected even before a person shows symptoms of Alzheimer's disease, making MRI a useful </p>
             </div>
           </li>
 
-          <li>
-            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-              </p>
-            </div>
-          </li>
 
         </ul>
 
       </div>
     </section><!-- End Frequently Asked Questioins Section -->
 
-    
+
 
   </main>
-  
-  
-  
+
+
+
   <!-- End #main -->
 
 
@@ -465,27 +478,28 @@
 
 
   <!-- ======= Footer ======= -->
-              
 
 
 
-    <div class="container " style="text-align: center;">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Team XD</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href="https://github.com/arvind2602">Arvind Gupta</a>
-      </div>
+
+  <div class="container " style="text-align: center;">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Team XD</span></strong>. All Rights Reserved
     </div>
+    <div class="credits">
+      Designed by <a href="https://github.com/arvind2602">Arvind Gupta</a><br><br>
+    </div>
+  </div>
   </footer>
-  
-  
-  
-  
+
+
+
+
   <!-- End Footer -->
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
 
